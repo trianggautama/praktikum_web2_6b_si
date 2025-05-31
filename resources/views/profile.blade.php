@@ -15,6 +15,11 @@
                 </div>
             </div>
             <div class="card-body">
+                @if(session('success'))
+                    <div class="alert alert-success">
+                        {{session('success')}}
+                    </div>
+                @endif
                 <div class="row">
                     <div class="col-md-2">
                         <img src="{{url('uploads/users/'.Auth::user()->foto)}}" alt="" class="img-thumbnail">

@@ -21,11 +21,17 @@
                         <label for="">Nama</label>
                         <input type="text" class="form-control" name="nama" 
                             id="nama" placeholder="Masukkan nama" value="{{$user->nama}}">
+                             @error('nama')
+                                <p class="text-danger">{{ $message }}</p>
+                            @enderror
                     </div>
                     <div class="mt-3">
                         <label for="">Nomor Telepon</label>
                         <input type="text" class="form-control" name="nomor_telepon" 
                             id="nomor_telepon" placeholder="Masukkan nomor telepon" value="{{$user->nomor_telepon}}">
+                             @error('nomor_telepon')
+                                <p class="text-danger">{{ $message }}</p>
+                            @enderror
                     </div>
                     <div class="mt-3">
                         <label for="">Jenis Kelamin</label>
@@ -34,11 +40,17 @@
                             <option value="Laki-laki" {{$user->jenis_kelamin == 'Laki-laki' ? 'selected' : ''}}>Laki-laki</option>
                             <option value="Perempuan" {{$user->jenis_kelamin == 'Perempuan' ? 'selected' : ''}}>Perempuan</option>
                         </select>
+                         @error('jenis_kelamin')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
                     </div>
                     <div class="mt-3">
                         <label for="">Alamat (optional)</label>
                         <textarea  class="form-control" name="alamat" 
                             id="alamat" placeholder="Masukkan Alamat">{{$user->alamat}}</textarea>
+                        @error('alamat')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
                     </div>
                     <div class="row mt-3">
                         <div class="col-md-2">
@@ -50,6 +62,9 @@
                                 <label for="">Foto (optional)</label>
                                 <input type="file" class="form-control" name="foto" id="foto">
                                 <small>isi jika ingin merubah foto</small>
+                                 @error('foto')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
                     </div>

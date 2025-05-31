@@ -12,6 +12,11 @@
                 Tambah Data Postingan
             </div>
             <div class="card-body">
+                @if(session('success'))
+                    <div class="alert alert-success">
+                        {{session('success')}}
+                    </div>
+                @endif
                 <form action="{{route('post.store')}}" method="post">
                     @csrf
                     <input type="text" name="judul" id="" class="form-control" placeholder="judul postingan">
