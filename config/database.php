@@ -3,7 +3,7 @@
 use Illuminate\Support\Str;
 
 return [
-
+    // triangga
     /*
     |--------------------------------------------------------------------------
     | Default Database Connection Name
